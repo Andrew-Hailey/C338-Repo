@@ -1,0 +1,23 @@
+echo "What is your first number:"
+read FIRST
+echo "What is your second number:"
+read SECOND
+echo "What is your third number:"
+read THIRD
+echo "What is your fourth number:"
+read FOURTH
+echo "What is your fifth number:"
+read FIFTH
+BASICBALLS=($FIRST $SECOND $THIRD $FOURTH $FIFTH)
+n=0
+for i in ${BASICBALLS[@]}
+do
+if grep -qw $i$ lotteryfiles/lottery.$(date +%A%d%B); then echo "$i is a winning number!"; n=$((n+1));  else echo "$i was not a winning number";
+fi
+done
+
+echo "You matched $n balls"
+
+
+
+

@@ -1,0 +1,18 @@
+read -p "Input a number: " NUM1
+read -p "Input another number: " NUM2
+if [[ $NUM1 =~ ^[[:digit:]]+$ ]] &&
+   [[ $NUM2 =~ ^[[:digit:]]+$ ]]
+	then
+	if [[ $NUM1 -gt $NUM2 ]]
+		then 
+		echo "True"
+		NUM3=$(($NUM1-$NUM2))
+                echo "the difference between the numbers is $NUM3."
+	else
+		echo "False"
+		NUM3=$(($NUM2-$NUM1))
+		echo "the difference between the numbers is $NUM3."
+	fi
+else
+echo "something other than an integer was entered. Please restart the script"
+fi

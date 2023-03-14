@@ -1,0 +1,5 @@
+for i in {1..5};
+	do echo "ball number $i is: $(($RANDOM % 50 + 1))" >> lotteryfiles/lottery.$(date +%A%d%B)
+done
+# Bonus ball
+echo "The Bonus ball is: $(($RANDOM % 10 + 1))" >> lotteryfiles/lottery.$(date +%A%d%B);

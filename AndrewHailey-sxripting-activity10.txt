@@ -1,0 +1,20 @@
+if [ $# -ne 2 ]; then
+  echo "Usage: $0 filename number_of_lines"
+  exit 1
+fi
+
+FILENAME=$1
+LINES=$2
+START=0
+if [ -f "$FILENAME" ]; 
+then
+echo "$FILENAME already exists"
+exit 1
+else
+	for (( i=1; i<=$LINES; i++ ))
+	do
+	echo "$(($RANDOM % 9 + 1))" >> $FILENAME
+	done
+fi
+echo "check $FILENAME for numbers"
+

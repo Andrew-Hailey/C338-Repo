@@ -1,0 +1,3 @@
+read -p "input a number: " NUMBER
+echo $NUMBER | rev
+

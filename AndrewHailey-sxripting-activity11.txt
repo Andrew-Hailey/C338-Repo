@@ -1,0 +1,2 @@
+numbers=$(cat numbers.txt)
+echo $numbers | tr ' ' '\n' | sort -n -r -u

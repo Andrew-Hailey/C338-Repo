@@ -1,0 +1,11 @@
+echo "Enter the name of a file:"
+read FILENAME
+if [ -f "$FILENAME"];
+then
+echo "File $FILENAME already exists."
+exit 1
+else
+touch "$FILENAME"
+echo "$FILENAME has been created"
+exit 0
+fi

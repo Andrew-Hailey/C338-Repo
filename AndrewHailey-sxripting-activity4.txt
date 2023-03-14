@@ -1,0 +1,15 @@
+echo "What is your password:"
+read PASSWORD
+LENGTH=($(echo -n $PASSWORD | wc -m))
+echo $LENGTH
+if [[ $PASSWORD == *[[:digit:]]* ]] &&
+   [[ $PASSWORD == *[[:alpha:]]* ]] &&
+   [[ $PASSWORD == *[A-Z]* ]] &&
+   [[ $PASSWORD == *[a-z]* ]] &&
+   [[ $LENGTH -ge 8 ]]
+then
+echo "pass"
+else
+echo "fail"
+fi
+
