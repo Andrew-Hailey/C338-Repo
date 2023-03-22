@@ -19,7 +19,7 @@ while True:
         continue
 while True:
     Coffee = str(
-        input("What kind of coffee would you like? (Brewed, Espresso, Cold brew)"))
+        input("What kind of coffee would you like? (Brewed, Espresso, Cold brew) "))
     Coffee = Coffee.title()
     if Coffee == "Espresso":
         Cost += 0.50
@@ -34,7 +34,7 @@ while True:
         continue
 while True:
     Flavour = str(
-        input("What flavouring would you like, if any? (Hazelnut, Vanilla, Caramel, or None)"))
+        input("What flavouring would you like, if any? (Hazelnut, Vanilla, Caramel, or None) "))
     Flavour = Flavour.title()
     if Flavour in ["Hazelnut", "Vanilla", "Caramel"]:
         Cost += 0.50
